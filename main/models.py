@@ -28,6 +28,8 @@ class Deal(models.Model):
     def __str__(self):
         return f"{self.Title}"
 
+# Start deal model, in this model locate id of customer and contractor 
+
 class Start(models.Model):
     Сontractor = models.ForeignKey(User, related_name='contrStart', on_delete = models.PROTECT)
     Customer = models.ForeignKey(User, related_name='custmStart', on_delete = models.PROTECT)
